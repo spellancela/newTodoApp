@@ -1,0 +1,5 @@
+.table {
+    display: flex;
+    flex: auto;
+    margin: 10px;
+}

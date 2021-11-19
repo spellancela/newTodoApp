@@ -1,0 +1,19 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "item": "clean house",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "item": "watch movie",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "item": "study math",
+      "completed": true
+    }
+  ]
+}
