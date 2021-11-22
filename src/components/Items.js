@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import Form from './Form'
+import './Items.css';
 import ItemList from './ItemList'
 import store from '../data/store'; 
-import { uuid } from 'uuidv4';
+
 
 
 export default function Items(props) {
@@ -12,7 +13,7 @@ export default function Items(props) {
     const [isComplete, setComplete] = useState(false)
 
     
-    const addTodoHandler = async items => {
+    const addTodoHandler = async items => {  
       console.log('this is', items);
       const request = {
             ...items,
@@ -57,7 +58,7 @@ export default function Items(props) {
 
 
     return (
-        <div>
+        <div className="container">
             <Form addTodoHandler={addTodoHandler}/>
             <ItemList todo={todo} {...props} deleteTodo={deleteTodoPost} />  
             

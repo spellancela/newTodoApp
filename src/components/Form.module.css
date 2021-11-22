@@ -1,5 +1,40 @@
-.table {
-    display: flex;
-    flex: auto;
-    margin: 10px;
+.header {
+    margin-bottom: 10px;
 }
+
+.table {
+    margin-bottom: 32px;
+}
+
+.todo_input {
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #5d0cff;
+    outline: none;
+    width: 400px;
+    background: transparent;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.todo_input::placeholder {
+    color: #e2e2e2;
+  }
+
+  
+.todo_button {
+    padding: 16px;
+    border: none;
+    border-radius: 5px 4px 4px 5px;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(
+      90deg,
+      rgb(255, 12, 65) 0%,
+      rgb(221, 199, 76) 100%
+    );
+    color: #fff;
+    text-transform: capitalize;
+    width: 400px;
+  }
+  

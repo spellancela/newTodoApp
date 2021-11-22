@@ -14,17 +14,17 @@ const ItemList = ({todo, deleteTodo}) => {
      
     //this should be map of get all the list
     
-      <div className={classes.container}>
-          <ul >
+      <div className="ui form">
+          <ul className="field" >
             {todo.map((todos, id) => 
-            <li  key={todos.id}> 
-                <div className="ui checkbox" style={{margin: `10px`, padding:`2px`}}>
+            <li  key={todos.id} className={classes.todo_li}> 
+                <div className="ui checkbox" >
                     <input type="checkbox"/> 
                     <label> {todos.item}</label> 
                     
                 </div>
                
-              <button className="ui button" type="submit"
+              <button className={classes.delete_btn}type="submit"
                  onClick={e => deleteHandler(todos.id)} > 
                  <i className="delete icon"/> Delete
               </button> 

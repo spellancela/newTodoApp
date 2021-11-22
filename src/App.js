@@ -5,7 +5,7 @@ import Button from './layout/Button';
 
 function App() {
   return (
-    <div className="ui container">
+    <div className="container">
        <Button/>
        <Items/>
     </div>
