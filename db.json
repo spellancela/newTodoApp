@@ -12,8 +12,13 @@
     },
     {
       "id": 3,
-      "item": "study math",
-      "completed": true
+      "item": "watch movie",
+      "completed": false
+    },
+    {
+      "item": "share data",
+      "isComplete": false,
+      "id": 4
     }
   ]
 }

@@ -3,44 +3,12 @@ import classes from './ItemList.module.css'
 import store from "../data/store";
 
 //axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-const ItemList = () => {
-  const [todo, setTodo] = useState([])
+const ItemList = ({todo, deleteTodo}) => {
 
-  useEffect(() => {
-    const getAllList = async () => {
-      const allContacts = await todoListItem();
-      if (allContacts) 
-       setTodo(allContacts);
-    };
-    getAllList();
-    
- 
-  }, []);
-
-  const todoListItem = async () => {
-    const response = await store.get("/todo");
-    console.log(response.data);
-    return response.data;
-  };
-
-
-  const deleteUserPost = async id => {
-     store.delete(`/todo/${id}`);
-     const newTodoList = todo.filter((item) => {
-       return item.id !==id;
-     });
-    
-    setTodo(newTodoList);
+   const deleteHandler = (id) => {
     console.log('delete', id);
-  };
-
-
-  const addTodoHandler = (e) =>{
-     console.log(e);
-  }
-
-
-
+     deleteTodo(id);
+   }
 
    return (  
      
@@ -57,7 +25,7 @@ const ItemList = () => {
                 </div>
                
               <button className="ui button" type="submit"
-                onClick={e => deleteUserPost(todos.id)}  > 
+                 onClick={e => deleteHandler(todos.id)} > 
                  <i className="delete icon"/> Delete
               </button> 
               
